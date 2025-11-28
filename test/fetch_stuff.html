@@ -1,0 +1,27 @@
+ <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Main Page</title>
+    </head>
+    <body>
+        <div id="header-container"></div>
+        <main>
+            <h1>Welcome to my website!</h1>
+            <p>This is the main content.</p>
+        </main>
+        <div id="footer-container"></div>
+
+        <script>
+            async function includeHTML() {
+                const headerResponse = await fetch('header.html');
+                const headerContent = await headerResponse.text();
+                document.getElementById('header-container').innerHTML = headerContent;
+
+                const footerResponse = await fetch('footer.html');
+                const footerContent = await footerResponse.text();
+                document.getElementById('footer-container').innerHTML = footerContent;
+            }
+            includeHTML();
+        </script>
+    </body>
+    </html>
