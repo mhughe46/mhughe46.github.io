@@ -1,10 +1,108 @@
-<!DOCTYPE html>
-<html>
+<html >
+<head>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(30, 30, 32);
+        }
+        header {
+            position: relative;
+            height: 56px;
+            width: 100%;
+            top: 0%;
+            /* background-color: rgb(255, 32, 32); */
+            margin-top: 0px;
+            margin-bottom: 40px;
+
+            
+        }
+
+        .return {
+            text-transform: uppercase;
+            
+            font-family: 'Oswald', sans-serif;
+            letter-spacing: 0.4rem;
+            width: max-content;
+            font-size: 1.25em;
+            line-height: 1.25;
+            font-weight: 600;
+            position: relative;
+            color: #FFFFFF;
+            top: 30%;
+            margin-left: 20px;
+        }
+
+        .title {
+            position: relative;
+            /* background-color: rgb(22, 22, 22); */
+            margin-bottom: 15px;
+            /* left: 20%; */
+            margin-left: 20px;
+
+            text-transform: uppercase;
+            color: #FFFFFF;
+            font-family: 'Oswald', sans-serif;
+            letter-spacing: 0.4rem;
+            width: max-content;
+            font-size: 3.25em;
+            line-height: 1.25;
+            font-weight: 600;
+        }
+
+        .video-container {
+        position: relative; /* Parent must be positioned */
+        height: max-content;
+        width: 100%;
+        /* background-color:blue; */
+        margin-bottom: 20px;
+        }
+        .video-container iframe {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+        /* margin-left: 5%; */
+        height: 60%;
+        width: 60%;
+        }
+
+        .description {
+            position: relative;
+            /* background-color: rgb(64, 54, 158); */
+            width: 50%;
+            margin-left: 20px;
+
+            text-align: left;
+
+            color: rgba(255,255,255,0.749);
+            letter-spacing: 0.075rem;
+            width: 50%;
+            font-size: 1em;
+            line-height: 1.25;
+            font-weight: 500;
+        }
+    </style>
+
+</head>
 <body>
 
-<iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-</iframe>
 
+    <header>
+        <h class="return">Back to Home</h>
+    </header>
+
+    
+
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/k4ixOwqnpzE?si=uVjbU_9gEtIBiBX6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <div class="title">
+        Title
+    </div>
+
+    <div class="description">
+        I made this trailer for the final project of a game design course. All of the models were created in SketchUp, the scenes were staged and rendered in Unity with built in post processing, and I orchestrated the soundtrack to fit the trailer.
+    </div>
 </body>
 </html>
-
