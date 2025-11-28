@@ -1,16 +1,4 @@
-<html >
-<head>
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            background-color: rgb(30, 30, 32);
-        }
-
-        a {
-            text-decoration: none;
-        }
-        header {
+header {
             position: relative;
             height: 56px;
             width: 100%;
@@ -90,30 +78,3 @@
             line-height: 1.25;
             font-weight: 500;
         }
-    </style>
-
-</head>
-<body>
-
-
-    <header>
-        <a class="return" href="../">Back to Home</a>
-    </header>
-
-    
-
-    <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/k4ixOwqnpzE?si=uVjbU_9gEtIBiBX6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-
-    <div class="title">
-        Title
-    </div>
-
-    <div class="description">
-        I made this trailer for the final project of a game design course. All of the models were created in SketchUp, the scenes were staged and rendered in Unity with built in post processing, and I orchestrated the soundtrack to fit the trailer.
-    </div>
-</body>
-</html>
-
-<script></script>

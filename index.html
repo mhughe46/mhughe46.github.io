@@ -1,1 +1,129 @@
-Main page
+ <!DOCTYPE html>
+    <html>
+        
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="style/main.css">
+
+        <style>
+
+            .about {
+                position: relative;
+                width: 100%;
+                background-color: rgb(87, 87, 87);
+                margin-top: 30px;
+            }
+
+
+            .pic {
+                position: relative;
+                height: 300px;
+                margin: 20px;
+            }
+
+            .grid-container {
+                /* background-color: rgb(41, 255, 148); */
+                display: grid;
+                
+                /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+                grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+                justify-items: center;
+            }
+
+            .grid-item {
+                position: relative;
+                display: grid;
+                background-color: #ee1818;
+                font-size: 30px;
+                text-align: center;
+                width: 350px;
+                height: 300px;
+                margin: 20px;
+                 /* aspect-ratio: 1 / 1; */
+            }
+
+            .grid-item img {
+                position: absolute;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                object-fit: cover; /* Scales and crops the image to fill the container */
+                object-position: center; /* Centers the image within the container by default */
+                
+            }
+
+            .grid-item div {
+                z-index: 2;
+                position:absolute;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(218, 221, 28, 0);
+                display: flex;
+            }
+
+            .grid-item:hover div {
+                background-color: rgba(0, 0, 0, 0.151);
+            }
+
+            .grid-item div span {
+                position: absolute;
+                bottom: 50%; /* Aligns the child element to the bottom of the parent */
+                left: 50%;
+                transform: translate(-50%, 50%);
+                color: #ffffff00;
+
+                text-transform: uppercase;
+                /* color: #FFFFFF; */
+                font-family: 'Oswald', sans-serif;
+                letter-spacing: 0.4rem;
+                width: max-content;
+                font-size: .75em;
+                line-height: 1.25;
+                font-weight: 600;
+            }
+
+            .grid-item:hover div span {
+                color: #ffffff;
+            }
+
+        </style>
+    </head>
+    <body>
+
+
+
+        <div class="about">
+            <img class="pic" src="me.jpg" alt="me">
+        </div>
+
+        <div class="grid-container">
+            <div class="grid-item">
+                <a href="posts/trailer/index.html">
+                    <img src="posts/trailer/trailer.webp">
+                    <div><span>Trailer</span></div>
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="posts/diorama/index.html">
+                    <img src="posts/diorama/diorama.jpeg">
+                    <div><span>Diorama</span></div>
+                </a>
+            </div>
+            <div class="grid-item">
+                <a href="posts/ghost/index.html">
+                    <img src="posts/ghost/ghost.webp">
+                    <div><span>Ghost</span></div>
+                </a>
+            </div>
+            <div class="grid-item">Item 4</div>
+            <div class="grid-item">Item 5</div>
+            <div class="grid-item">Item 5</div>
+            <div class="grid-item">Item 5</div>
+            <div class="grid-item">Item 5</div>
+            <div class="grid-item">Item 5</div>
+        </div>
+        
+    </body>
+    </html>
