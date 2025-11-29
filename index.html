@@ -71,7 +71,7 @@
 
             .grid-item div span {
                 position: absolute;
-                bottom: 50%; /* Aligns the child element to the bottom of the parent */
+                bottom: 50%;
                 left: 50%;
                 transform: translate(-50%, 50%);
                 color: #ffffff00;
@@ -124,6 +124,38 @@
                 height:17%;
             }
 
+            .selector {
+                position: relative;
+                width: 100%;
+                height: 100px;
+                margin-top: 20px;
+
+                background-color: rgb(41, 255, 148);
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+            }
+
+            
+
+            .button {
+                background-color: #000000;
+                /* border: 1px solid black; */
+                font-size: 30px;
+                text-align: center;
+            }
+
+            .button:hover {
+                background-color: #070707;
+            }
+
+            .button span {
+                position: absolute;
+                /* background-color: #ee1818; */
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: max-content;
+            }
+
 
         </style>
     </head>
@@ -141,44 +173,51 @@
             <a href="https://www.artstation.com/mhughe46"><img class="as" src="artstation.png" alt=""></a>
         </div>
 
+        <div class="selector">
+            <div class="button" onclick="hideItemByClass('grid-item')"><span>All</span></div>
+            <div class="button" onclick="hideItemByClass('char')"><span>Characters</span></div>
+            <div class="button" onclick="hideItemByClass('eng')"><span>Engineering</span></div>
+            <div class="button" onclick="hideItemByClass('env')"><span>Environments</span></div>
+        </div>
+
         <div class="grid-container">
-            <div class="grid-item">
+            <div class="grid-item env">
                 <a href="posts/trailer/index.html">
                     <img src="posts/trailer/trailer.webp">
                     <div><span>Trailer</span></div>
                 </a>
             </div>
-            <div class="grid-item">
+            <div class="grid-item env">
                 <a href="posts/diorama/index.html">
                     <img src="posts/diorama/diorama.jpeg">
                     <div><span>Diorama</span></div>
                 </a>
             </div>
-            <div class="grid-item">
+            <div class="grid-item char">
                 <a href="posts/ghost/index.html">
                     <img src="posts/ghost/ghost.webp">
                     <div><span>Ghost</span></div>
                 </a>
             </div>
-            <div class="grid-item">
+            <div class="grid-item char">
                 <a href="posts/snowman/index.html">
                     <img src="posts/snowman/snowman.jpeg">
                     <div><span>Snowman</span></div>
                 </a>
             </div>
-            <div class="grid-item">
+            <div class="grid-item char">
                 <a href="posts/wgirl/index.html">
                     <img src="posts/wgirl/character.jpeg">
                     <div><span>Winter Girl</span></div>
                 </a>
             </div>
-            <div class="grid-item">
+            <div class="grid-item env">
                 <a href="posts/restaurant/index.html">
                     <img src="posts/restaurant/diorama4.webp">
                     <div><span>Restaurant</span></div>
                 </a>
             </div>
-            <div class="grid-item">
+            <div class="grid-item char">
                 <a href="posts/gargs/index.html">
                     <img src="posts/gargs/garg2.webp">
                     <div><span>Garygoyle Sculpts</span></div>
@@ -187,6 +226,23 @@
             <div class="grid-item">Item 5</div>
             <div class="grid-item">Item 5</div>
         </div>
+
+        <script>
+            function hideItemByClass(name) {
+                
+                const elements = document.getElementsByClassName("grid-item");
+                
+                for (let i = 0; i < elements.length; ++i) {
+                    if (!elements[i].classList.contains(name)) {
+                        elements[i].style.display = "none";
+                    } else {
+                        elements[i].style.display = "grid";
+                    }
+                    
+                }
+                
+            }
+        </script>
         
     </body>
     </html>
