@@ -7,3 +7,13 @@ html, body {
 a {
     text-decoration: none;
 }   
+
+span {
+    color: rgba(255, 255, 255, 0.925);
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 0.075rem;
+    width: 50%;
+    font-size: 1em;
+    line-height: 1.25;
+    font-weight: 550;
+}

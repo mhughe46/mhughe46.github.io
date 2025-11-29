@@ -10,7 +10,8 @@
             .about {
                 position: relative;
                 width: 100%;
-                background-color: rgb(87, 87, 87);
+                height: 340px;
+                background-color:  #13294B;
                 margin-top: 30px;
             }
 
@@ -18,7 +19,8 @@
             .pic {
                 position: relative;
                 height: 300px;
-                margin: 20px;
+                padding: 20px;
+                background-color: #151515;
             }
 
             .grid-container {
@@ -88,6 +90,41 @@
                 color: #ffffff;
             }
 
+            .r_info {
+                position: absolute;
+                text-align: right;
+                right: 0;
+                top: 0;
+                margin: 20px;
+            }
+
+            .m_info {
+                position: absolute;
+                text-align: center;
+                left: 40%;
+                top: 50%;
+                margin: 20px;
+                background-color: #4B9CD3;
+                transform: translate(-50%, -50%);
+                font-weight: 600;
+                font-size: 500%;
+                padding: 20px;
+            }
+
+            .as {
+                position: absolute;
+                text-align: right;
+                right: 0;
+                bottom: 0;
+                margin: 20px;  
+                height: 15%;
+            }
+
+            .as:hover {
+                height:17%;
+            }
+
+
         </style>
     </head>
     <body>
@@ -96,6 +133,12 @@
 
         <div class="about">
             <img class="pic" src="me.jpg" alt="me">
+            <span class="m_info">Matt Hughes<br>Artist and Engineer</span>
+            <span class="r_info">
+                BS Mathematics from UNC Chapel Hill<br>
+                Current Graduate Animatronics at UNC School of the Arts
+            </span>
+            <a href="https://www.artstation.com/mhughe46"><img class="as" src="artstation.png" alt=""></a>
         </div>
 
         <div class="grid-container">
@@ -135,7 +178,12 @@
                     <div><span>Restaurant</span></div>
                 </a>
             </div>
-            <div class="grid-item">Item 5</div>
+            <div class="grid-item">
+                <a href="posts/gargs/index.html">
+                    <img src="posts/gargs/garg2.webp">
+                    <div><span>Garygoyle Sculpts</span></div>
+                </a>
+            </div>
             <div class="grid-item">Item 5</div>
             <div class="grid-item">Item 5</div>
         </div>
