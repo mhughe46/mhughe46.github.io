@@ -66,9 +66,21 @@
 
     .vid_grid div {
         position: relative;
-        background-color: brown;
+        /* background-color: brown; */
         width: 50vw;
+        height: 40vw;
+        margin: 5%;
+    }
+
+    .vid_grid div iframe {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        /* margin-left: 5%; */
         height: max-content;
+        width: 100%;
+        height: 60%;
     }
 
     .vid_grid3 {
@@ -79,7 +91,7 @@
 
     .vid_grid3 video {
         position: relative;
-        width: 70%;
+        width: 50%;
         top: 50%;
         transform: translate(0%, -50%);
         margin-left: 20%;
@@ -141,13 +153,13 @@
     <script src="../../scripts/header.js" defer></script>
 
     <div class="vid_grid">
-        <div><iframe width="100%" src="https://www.youtube.com/embed/eyqOsFmscg0?si=LiB9IWTIJLZwCfqE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+        <!-- <div></div> -->
+        <div><iframe src="https://www.youtube.com/embed/eyqOsFmscg0?si=LiB9IWTIJLZwCfqE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
         <video controls muted loop class="mini_video" src="moving2.MOV" width="50%"></video>
     </div>
 
     <div class="vid_grid3">
         <video controls muted loop class="mini_video" src="eyes3.MOV"></video>
-        <video controls muted loop class="mini_video" src="eyes2.MOV"></video>
         <video controls muted loop class="mini_video" src="eyes1.MOV"></video>
     </div>
 
@@ -158,7 +170,7 @@
     </div>
     
     <div class="vid_grid3">
-        <video controls muted loop class="mini_video" src="D1.MOV"></video>
+        <video controls muted loop class="mini_video" src="D1.mp4"></video>
         <video controls muted loop class="mini_video" src="D2.MOV"></video>
         <video controls muted loop class="mini_video" src="D3.MOV"></video>
     </div>
