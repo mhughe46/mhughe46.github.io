@@ -1,0 +1,187 @@
+<html >
+<head>
+    <title>Trailer</title>
+    <link rel="stylesheet" href="../../style/main.css">
+    <link rel="stylesheet" href="../../style/post.css">
+
+    <style>
+    .main_video {
+        height: 75%;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+
+    .img_grid {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        position: relative;
+        left: 0%;
+        top: 0%;
+        }
+
+    .img_grid img {
+        position: relative;
+        width: 70%;
+        left: 40%;
+        top: 00%;
+        transform: translate(-50%, 0%);
+        background-color: brown;
+    }
+
+    .img_grid3 {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        position: relative;
+        left: 0%;
+        top: 0%;
+        }
+
+    .img_grid3 img {
+        position: relative;
+        width: 90%;
+        left: 50%;
+        top: 00%;
+        transform: translate(-55%, 0%);
+        background-color: brown;
+    }
+
+    .vid_grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        position: relative;
+    }
+
+    .vid_grid video {
+        position: relative;
+        /* width: 40%; */
+        left: 50%;
+        top: 50%;
+        transform: translate(-60%, -50%);
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-bottom: 5%;
+    }
+
+    .vid_grid iframe {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+        /* margin-left: 5%; */
+        height: 60%;
+        width: 60%;
+    }
+
+    .vid_grid3 {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        position: relative;
+    }
+
+    .vid_grid3 video {
+        position: relative;
+        width: 70%;
+        top: 50%;
+        transform: translate(0%, -50%);
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-bottom: 5%;
+    }
+
+    .last {
+        display: grid;
+        grid-template-columns: auto auto;
+        position: relative;
+    }
+
+    .last_text {
+        position: absolute;
+        /* background-color: rgb(64, 54, 158); */
+        width: 50%;
+        left: 35%;
+        top: 20%;
+        text-align: left;
+
+        color: rgba(255,255,255,0.749);
+        font-family: 'Oswald', sans-serif;
+        letter-spacing: 0.075rem;
+        width: 50%;
+        font-size: 2em;
+        line-height: 1.25;
+        font-weight: 500;
+}
+    </style>
+</head>
+
+
+<body>
+
+    <header id="header-container"></header>
+    <div style="margin-bottom: 70px;"></div>
+
+    <div class="video-container">
+        <video controls autoplay muted loop class="main_video" src="main.mp4" autoplay></video>
+    </div>
+
+    <div class="title">
+        Sour Patch Monster (Bingus)
+    </div>
+
+    <div class="description">
+        A glow in the dark sour patch kids themed monster which was used
+        in a project by the film department. I designed, fabricated, and assembled
+        the entirety of the mechanics for this animatronics based off of 
+        previously made animatronics by the school as well as with guidance from
+        my team lead, teachers, and other students. I created the design in Fusion 360
+        and 3D printed it in parts. I also sculpted his body in Z Brush which was used to
+         support his fur as well as his hands and feet. I worked with another student to wire controllers connected
+         to an ESP32 which allowed us to control Bingus remotely.
+
+    </div>
+
+    <script src="../../scripts/header.js" defer></script>
+
+    <div class="vid_grid">
+        <iframe src="https://www.youtube.com/embed/eyqOsFmscg0?si=LiB9IWTIJLZwCfqE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <video controls muted loop class="mini_video" src="moving2.MOV" width="50%"></video>
+    </div>
+
+    <div class="vid_grid3">
+        <video controls muted loop class="mini_video" src="eyes3.MOV"></video>
+        <video controls muted loop class="mini_video" src="eyes2.MOV"></video>
+        <video controls muted loop class="mini_video" src="eyes1.MOV"></video>
+    </div>
+
+    <div class="img_grid3">
+        <img src="C1.JPG" alt="">
+        <img src="C2.JPG" alt="">
+        <img src="C3.JPG" alt="">
+    </div>
+    
+    <div class="vid_grid3">
+        <video controls muted loop class="mini_video" src="D1.MOV"></video>
+        <video controls muted loop class="mini_video" src="D2.MOV"></video>
+        <video controls muted loop class="mini_video" src="D3.MOV"></video>
+    </div>
+
+    <div class="img_grid3">
+        <img src="E1.JPG" alt="">
+        <img src="E2.JPG" alt="">
+        <img src="E3.JPG" alt="">
+    </div>
+    <div class="img_grid">
+        <img src="F1.JPG" alt="">
+        <img src="F2.JPG" alt="">
+    </div>
+
+    <div class="last">
+        <img src="ref2.JPG" alt="" width="30%">
+        <div class="last_text" >Previous school animatronic I used as reference</div>
+    </div>
+    
+    
+</body>
+</html>
+
+<script></script>

@@ -1,0 +1,94 @@
+<html >
+<head>
+    <title>Trailer</title>
+    <link rel="stylesheet" href="../../style/main.css">
+    <link rel="stylesheet" href="../../style/post.css">
+
+    <style>
+    .main_video {
+        height: 75%;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+
+    .img_grid {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        position: relative;
+        left: 0%;
+        top: 0%;
+        }
+
+    .img_grid img {
+        position: relative;
+        width: 90%;
+        left: 40%;
+        top: 00%;
+        transform: translate(-50%, 0%);
+        background-color: brown;
+    }
+
+    .vid_grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        position: relative;
+    }
+
+    .vid_grid video {
+        position: relative;
+        width: 40%;
+        transform: translate(25%, 0);
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-bottom: 5%;
+    }
+    </style>
+</head>
+
+
+<body>
+
+    <header id="header-container"></header>
+    <div style="margin-bottom: 70px;"></div>
+
+    <div class="video-container">
+        <video controls autoplay muted loop class="main_video" src="Turning.mp4" autoplay></video>
+    </div>
+
+    <div class="title">
+        Frankenstein Factory Arm
+    </div>
+
+    <div class="description">
+        A Frankenstein inspired factory arm I created for a class project. 
+        The inside is a wood box housing the servo, servo mount, and shaft coupling connecting
+        shafts from the servo horn to the arm through a bearing. The outside of the box is aluminum sheet
+        metal which was deburred, hammered into shape, and screwed into the wooden frame. The metal
+        was also scuffed with sandpaper and splattered with paint to give a more worn look. I sculpted the
+        arm in Blender and 3D printed it before sanding, priming, and painting it.
+    </div>
+
+    <script src="../../scripts/header.js" defer></script>
+
+    <div class="img_grid">
+        <img src="IMG_2916.JPG" alt="">
+        <img src="IMG_2913.JPG" alt="">
+        <img src="IMG_2914.JPG" alt="">
+        <img src="IMG_2915.JPG" alt="">
+        
+    </div>
+    <img src="IMG_2884.JPG" width="40%" alt="">
+    
+    <img src="IMG_2922.JPG" width="40%" alt="">
+
+    <div class="vid_grid">
+        <video controls autoplay muted loop class="mini_video" src="IMG_2885.MOV" autoplay></video>
+        <video controls autoplay muted loop class="mini_video" src="IMG_2888.MOV" autoplay></video>
+    </div>
+    
+</body>
+</html>
+
+<script></script>
