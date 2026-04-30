@@ -1,0 +1,140 @@
+ <!DOCTYPE html>
+    <html>
+        
+    <head>
+        <title>About</title>
+
+        <style>
+            @font-face {
+                font-family: 'Project Blackbird';
+                src: url('fonts/projekt-blackbird-v2.otf') format('opentype'); /* Adjust path */
+                font-weight: normal;
+                font-style: normal;
+            }
+            body {
+                margin: 0;
+                padding: 0; /* Optional: Resets internal padding if any */
+                /* background-color: #120e0e; */
+                font-family: 'Project Blackbird'; /* Add fallback */
+                position: relative;
+            }
+
+            a {
+                text-decoration: none;
+                margin: 0px;
+                padding: 0px;
+            }
+
+            .header-container {
+                position: relative;
+                width: calc(100%-20px);
+                /* height: 3svw; */
+                background-color: rgb(0, 0, 0); /* Optional */
+                display: grid;
+                grid-template-columns: 25% 25% 25% 25%;
+                padding: 5px;
+            }
+
+            .main {
+                display: grid;
+                font-size: 1cqi;
+                text-align: center;
+                align-items: center;
+                /* height: 100%; */
+                /* background-color: aqua; */
+                color: whitesmoke
+            }
+
+            .about-container {
+                position: relative;
+                width: 100%;
+                height: 100svh;
+                background-color:rgb(49, 175, 137);
+                display: grid;
+                grid-template-columns: 61.803398875% 38.196601125%;
+            }
+
+            .info-container {
+                /* background-color: antiquewhite; */
+                margin: 1%;
+            }
+
+            .pic-container {
+                /* background-color: blue; */
+                display: grid;
+            }
+
+            .back {
+                display: grid;
+                font-size: 1.5cqi;
+                text-align: left;
+                align-items: center;
+                /* background-color: aqua; */
+                color: whitesmoke;
+                text-indent: 50px;
+                transition: text-indent 0.5s ease;
+            }
+
+            .back:hover {
+                text-indent: 70px;
+            }
+
+            .pic-container img {
+                position: relative;
+                width: 50%;
+                left: 50%;
+                transform: translate(-50%, 0);
+                margin-top: 5%;
+            }
+
+            .pic-container span {
+                position: relative;
+                /* top: 5%; */
+                background-color: aquamarine;
+                text-align: left;
+                left: 0%;
+                height: fit-content;
+            }
+
+            .info-container span {
+                font-size: 3cqi;
+            }
+        </style>
+
+
+
+    </head>
+
+    <body>
+        <div class="header-container">
+            <!-- <div>Engineering</div>
+            <div>Characters</div>
+            <div>Environments</div> -->
+            <div class="back" onclick="goHome()">Back</div>
+            <div></div>
+            <div></div>
+            <div class="main">Matt Hughes <br> Artist and Engineer</div>
+        </div>
+
+        <div class="about-container">
+            <div class="info-container">
+                <span>Education</span>
+                <h1>Current Graduate Animatronics at UNC School of the Arts<br>
+                BS Mathematics from UNC Chapel Hill<br>
+                Certificate in Simulation and Game Development from Wake Tech Community College</h1>
+                
+                <h1><br>Email: mhughe46@gmail.com</h1>
+                
+            </div>
+            <div class="pic-container">
+                <img src="me.jpg">
+                
+            </div>
+        </div>
+
+        <script>
+            function goHome() {
+                window.location.href = "index.html";
+            }
+        </script>
+    </body>
