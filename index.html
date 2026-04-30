@@ -24,20 +24,21 @@
                 position: relative;
                 width: calc(100%-20px);
                 /* height: 3svw; */
-                background-color: rgb(75, 89, 172); /* Optional */
-                box-shadow: inset 0 0 0 5px red;
+                background-color: rgb(0, 0, 0); /* Optional */
                 display: grid;
-                grid-template-columns: auto auto auto auto;
-                padding: 10px;
+                grid-template-columns: 25% 25% 25% 25%;
+                padding: 5px;
+                
             }
 
             .header-container div{
                 display: grid;
-                font-size: 22px;
+                font-size: 1cqi;
                 text-align: center;
                 align-items: center;
                 /* height: 100%; */
-                background-color: aqua;
+                /* background-color: aqua; */
+                color: whitesmoke
             }
 
 
@@ -45,7 +46,7 @@
                 position: relative;
                 width: 100%;
                 height: fit-content;
-                background-color: rgb(134, 138, 136);
+                /* background-color: rgb(14, 230, 122); */
                 box-shadow: inset 0 0 0 5px rgb(59, 211, 59);
                 display: grid;
                 grid-template-columns: 61.803398875% 38.196601125%;
@@ -54,13 +55,13 @@
             .display-box {
                 width: 100%;
                 height: 100%;
-                background-color: rgb(182, 134, 30);
+                background-color: rgb(49, 175, 137);
             }
 
             .display-text {
                 width: 100%;
                 height: 100%;
-                background-color: rgb(27, 118, 221);
+                background-color: rgb(238, 242, 243);
                 display: grid;
                 grid-template-rows: 15% 70% 15%;
             }
@@ -70,26 +71,44 @@
             }
 
             .display-title {
-                background-color: azure;
+                background-color: black;
                 align-items: center;
                 display: grid;
                 font-size: 2.25cqi;
+                color: whitesmoke;
+                padding: 10px;
             }
 
             .display-desc {
-                background-color: darkolivegreen;
+                /* background-color: darkolivegreen; */
                 font-size: 1.5cqi;
             }
 
             .display-button {
-                background-color: rgb(100, 237, 146);
+                /* background-color: rgb(100, 237, 146); */
                 display: grid;
+            }
+
+            .actual-button {
+                position: relative;
+                background-color: black;
+                height: calc(100%-10px);
+                display: grid;
+                text-align: center;
+                align-items: center;
+                font-size: 2.8cqi;
+                color: whitesmoke;
+                padding: 5px;
+            }
+
+            .actual-button:hover {
+                background-color: rgb(15, 14, 15);
             }
 
             .c-container {
                 width: calc(100% - 20px);
                 height: fit-content;
-                background-color: bisque;
+                background-color: rgb(0, 0, 0);
                 margin: 10px;
                 align-items: center;
                 display: grid;
@@ -107,7 +126,7 @@
             .divider {
                 width: 100%;
                 height: 10svw;
-                background-color: black;
+                background-color: rgb(9, 14, 12);
                 display: grid;
                 grid-template-columns: 50% 50%;
                 align-items: center;
@@ -122,11 +141,11 @@
             .gallery {
                 width: 100%;
                 height: 100svh;
-                background-color: antiquewhite;
+                background-color: whitesmoke;
             }
 
             .gallery-item {
-                background-color: blueviolet;
+                background-color: rgb(49, 42, 49);
                 width: 100%;
                 height: 20svw;
                 margin-top: 20px;
@@ -139,7 +158,7 @@
                 width: calc(100% - 20px);
                 height: calc(20svw - 20px);
                 margin: 10px;
-                background-color: bisque;
+                background-color: rgb(32, 29, 32);
 
             }
 
@@ -152,7 +171,7 @@
             }
 
             .item-text {
-                background-color: chocolate;
+                /* background-color: chocolate; */
                 width: calc(100% - 20px);
                 height: calc(20svw - 20px);
                 margin: 10px;
@@ -163,31 +182,35 @@
             .item-text-title {
                 width: 100%;
                 height: 100%;
-                background-color: rgb(61, 42, 165);
+                /* background-color: antiquewhite; */
                 font-size: 2.8cqi;
+                color: whitesmoke;
+                text-decoration: underline;
             }
 
             .item-text-text {
                 width: 100%;
                 height: 100%;
-                background-color: brown;
+                /* background-color: rgb(204, 188, 168); */
                 font-size: 2cqi;
+                color: rgb(230, 226, 226);
             }
 
             .item-button-box {
                 width: 100%;
                 height: 100%;
-                background-color: rgba(198, 216, 39, 0.616);
+                background-color: rgb(132, 207, 185);
                 color: black;
                 display: grid;
                 align-items: center;
                 text-align: center;
                 font-size: 2.8cqi;
-                transition: transform 0.3s ease-in-out;
+                text-indent: 0;
+                transition: text-indent 0.5s ease;
             }
 
             .item-button-box:hover {
-                transform: scale(.95);
+                text-indent: 50px;
             }
 
             a {
@@ -209,21 +232,46 @@
             }
 
             .c-button {
-                background-color: blueviolet;
+                /* background-color: blueviolet; */
                 width: 100%;
                 height: 100%;
             }
 
-            .actual-button {
+            .about-button {
                 position: relative;
-                background-color: brown;
-                height: calc(100%-10px);
-                display: grid;
-                text-align: center;
+                background-color: rgb(49, 175, 137);
+                height: 50%;
                 align-items: center;
-                font-size: 2.8cqi;
+                text-align: center;
+                display: grid;
+                width: 50%;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                text-indent: 0;
+                transition: text-indent 0.5s ease;
+                /* height: 70%; */
                 color: black;
-                padding: 5px;
+            }
+
+            .about-button:hover {
+                text-indent: 50px;
+            }
+
+            .about-container {
+                position: relative;
+                /* background-color: brown; */
+                width: 100%;
+                height: 100%;
+                display: grid;
+                /* align-items: center;
+                text-align: center; */
+            }
+            
+            .header-div {
+                background-color: rgb(49, 175, 137);
+                width: 100%;
+                height: 10px;
             }
 
         </style>
@@ -231,11 +279,16 @@
     <body>
 
         <div class="header-container">
-            <div>Engineering</div>
+            <!-- <div>Engineering</div>
             <div>Characters</div>
-            <div>Environments</div>
+            <div>Environments</div> -->
+            <div></div>
+            <div></div>
+            <div></div>
             <div>Matt Hughes <br> Artist and Engineer</div>
         </div>
+
+        <div class="header-div"></div>
 
         <div class="display-container">
             <div class="display-box">
@@ -258,7 +311,7 @@
 
         <div class="divider">
             <div>Want to contact me?</div>
-            <div>Dont!</div>
+            <div class="about-container"><div class="about-button">About</div></div>
         </div>
 
         <div class="gallery">
@@ -305,8 +358,7 @@
                 <div class="item-img"><img src="posts/Hoppy/Ortho2.JPG" alt=""></div>
                 <div class="item-text">
                     <div class="item-text-title">Hoppy the Penguin</div>
-                    <div class="item-text-text">A glow in the dark sour-patch themed animatronic used to film a commercial
-                        in partnership with the UNCSA film department.
+                    <div class="item-text-text">A three function animatronic penguin I designed and fabricated.
                     </div>
                     <a href="posts/Hoppy/index.html"><div class="item-button-box">See More</div></a>
                 </div>
@@ -319,15 +371,20 @@
 
             // document.getElementById("c-button").style.backgroundColor = "red";
 
+            
+            var cc = 0;
+
             function UpdateCarousel(n) {
                 for (let i = 0; i < 4; i++) {
                     document.getElementsByClassName("c-button")[i].style.backgroundColor = "grey";
                 }
-                document.getElementsByClassName("c-button")[n].style.backgroundColor = "red";
+                document.getElementsByClassName("c-button")[n].style.backgroundColor = "rgb(25, 24, 26)";
                 document.getElementsByClassName("display-title")[0].innerHTML = cTitles[n];
                 document.getElementById('c-img').src = cImgs[n];
                 document.getElementById('display_button').href = cLinks[n];
-                 document.getElementsByClassName("display-desc")[0].innerHTML = cDesc[n];
+                document.getElementsByClassName("display-desc")[0].innerHTML = cDesc[n];
+                clearTimeout(cc);
+                cc = setTimeout(UpdateCarousel, 8000, (n+1) % 4);
 
             }
 
@@ -336,11 +393,12 @@
             const cLinks = ['posts/Dove/index.html', 'posts/Arm/index.html', 'posts/bingus/index.html', 'posts/Hoppy/index.html']
             const cDesc = [
                 'An animatronic dove I designed and puppeteered for the UNCSA spring opera La Colombe.',
-                'dasgagdga',
-                'asagag',
-                'shdsh'
+                'A robotic animatronic and puppet I designed and puppeteered for the short film Re:Wired.',
+                'A glow in the dark sour-patch themed animatronic used to film a commercial in partnership with the UNCSA film department. ',
+                'A three function animatronic penguin I designed and fabricated.'
             ];
 
+            // let cc = 0;
             UpdateCarousel(0);
 
         </script>
