@@ -3,292 +3,349 @@
         
     <head>
         <title>Home</title>
-        <link rel="stylesheet" href="style/main.css">
+        <!-- <link rel="stylesheet" href="style/main.css"> -->
 
         <style>
-
-            .about {
+            @font-face {
+                font-family: 'Project Blackbird';
+                src: url('fonts/projekt-blackbird-v2.otf') format('opentype'); /* Adjust path */
+                font-weight: normal;
+                font-style: normal;
+            }
+            body {
+                margin: 0;
+                padding: 0; /* Optional: Resets internal padding if any */
+                /* background-color: #120e0e; */
+                font-family: 'Project Blackbird'; /* Add fallback */
                 position: relative;
-                width: 100%;
-                height: max-content;
-                /* background-color:  #13294b00; */
-                margin-top: 30px;
             }
 
-
-            .pic {
+            .header-container {
                 position: relative;
-                height: 300px;
-                padding: 20px;
-                background-color: #151515;
-            }
-
-            .grid-container {
-                /* background-color: rgb(41, 255, 148); */
+                width: calc(100%-20px);
+                /* height: 3svw; */
+                background-color: rgb(75, 89, 172); /* Optional */
+                box-shadow: inset 0 0 0 5px red;
                 display: grid;
-                
-                /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
-                grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
-                justify-items: center;
+                grid-template-columns: auto auto auto auto;
+                padding: 10px;
             }
 
-            .grid-item {
-                position: relative;
+            .header-container div{
                 display: grid;
-                background-color: #ee1818;
-                font-size: 30px;
+                font-size: 22px;
                 text-align: center;
-                width: 350px;
-                height: 300px;
-                margin: 20px;
-                 /* aspect-ratio: 1 / 1; */
+                align-items: center;
+                /* height: 100%; */
+                background-color: aqua;
             }
 
-            .grid-item img {
-                position: absolute;
-                z-index: 1;
+
+            .display-container {
+                position: relative;
+                width: 100%;
+                height: fit-content;
+                background-color: rgb(134, 138, 136);
+                box-shadow: inset 0 0 0 5px rgb(59, 211, 59);
+                display: grid;
+                grid-template-columns: 61.803398875% 38.196601125%;
+            }
+
+            .display-box {
                 width: 100%;
                 height: 100%;
-                top: 0;
-                left: 0;
-                object-fit: cover; /* Scales and crops the image to fill the container */
-                object-position: center; /* Centers the image within the container by default */
-                
+                background-color: rgb(182, 134, 30);
             }
 
-            .grid-item div {
-                z-index: 2;
-                position:absolute;
+            .display-text {
                 width: 100%;
                 height: 100%;
-                background-color: rgba(218, 221, 28, 0);
-                display: flex;
+                background-color: rgb(27, 118, 221);
+                display: grid;
+                grid-template-rows: 15% 70% 15%;
             }
 
-            .grid-item:hover div {
-                background-color: rgba(0, 0, 0, 0.151);
+            .display-text div {
+                margin: 5px;
             }
 
-            .grid-item div span {
-                position: absolute;
-                bottom: 50%;
+            .display-title {
+                background-color: azure;
+                align-items: center;
+                display: grid;
+                font-size: 2.25cqi;
+            }
+
+            .display-desc {
+                background-color: darkolivegreen;
+                font-size: 1.5cqi;
+            }
+
+            .display-button {
+                background-color: rgb(100, 237, 146);
+                display: grid;
+            }
+
+            .c-container {
+                width: calc(100% - 20px);
+                height: fit-content;
+                background-color: bisque;
+                margin: 10px;
+                align-items: center;
+                display: grid;
+            }
+
+            .c-container img {
+                /* width: 100%; */
+                height: 30svw;
+                object-fit: contain;
                 left: 50%;
-                transform: translate(-50%, 50%);
-                color: #ffffff00;
-
-                text-transform: uppercase;
-                /* color: #FFFFFF; */
-                font-family: 'Oswald', sans-serif;
-                letter-spacing: 0.4rem;
-                width: max-content;
-                font-size: .75em;
-                line-height: 1.25;
-                font-weight: 600;
+                position: relative;
+                transform: translate(-50%, 0);
             }
 
-            .grid-item:hover div span {
-                color: #ffffff;
-            }
-
-            .r_info {
-                position: absolute;
-                text-align: right;
-                right: 0;
-                top: 0;
-                margin: 20px;
-            }
-
-            .m_info {
-                position: absolute;
+            .divider {
+                width: 100%;
+                height: 10svw;
+                background-color: black;
+                display: grid;
+                grid-template-columns: 50% 50%;
+                align-items: center;
                 text-align: center;
-                left: 40%;
-                top: 50%;
-                margin: 20px;
-                background-color: #4B9CD3;
-                transform: translate(-50%, -50%);
-                font-weight: 600;
-                font-size: 500%;
-                padding: 20px;
             }
 
-            .as {
-                position: absolute;
-                text-align: right;
-                right: 0;
-                bottom: 0;
-                margin: 20px;  
-                height: 15%;
+            .divider div {
+                color: white;
+                font-size: 2.25cqi;
             }
 
-            .as:hover {
-                height:17%;
+            .gallery {
+                width: 100%;
+                height: 100svh;
+                background-color: antiquewhite;
             }
 
-            .selector {
+            .gallery-item {
+                background-color: blueviolet;
+                width: 100%;
+                height: 20svw;
+                margin-top: 20px;
+                display: grid;
+                grid-template-columns: 25% 25% 25% 25%;
+            }
+
+            .item-img {
+                position: relative;
+                width: calc(100% - 20px);
+                height: calc(20svw - 20px);
+                margin: 10px;
+                background-color: bisque;
+
+            }
+
+            .item-img img {
                 position: relative;
                 width: 100%;
-                height: 100px;
-                margin-top: 20px;
+                height: 100%;
+                object-fit: contain; 
+                margin: 0px;
+            }
 
-                background-color: rgb(41, 255, 148);
+            .item-text {
+                background-color: chocolate;
+                width: calc(100% - 20px);
+                height: calc(20svw - 20px);
+                margin: 10px;
+                display: grid;
+                grid-template-rows: 15% 70% 15%;
+            }
+
+            .item-text-title {
+                width: 100%;
+                height: 100%;
+                background-color: rgb(61, 42, 165);
+                font-size: 2.8cqi;
+            }
+
+            .item-text-text {
+                width: 100%;
+                height: 100%;
+                background-color: brown;
+                font-size: 2cqi;
+            }
+
+            .item-button-box {
+                width: 100%;
+                height: 100%;
+                background-color: rgba(198, 216, 39, 0.616);
+                color: black;
+                display: grid;
+                align-items: center;
+                text-align: center;
+                font-size: 2.8cqi;
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .item-button-box:hover {
+                transform: scale(.95);
+            }
+
+            a {
+                text-decoration: none;
+                margin: 0px;
+                padding: 0px;
+            }
+
+            .c-buttons {
+                position: absolute;
+                background-color: aliceblue;
+                bottom: 5%;
+                left:  30.9016994375%;
+                transform: translate(-50%, -50%);
+                width: 20%;
+                height: 5%;
                 display: grid;
                 grid-template-columns: auto auto auto auto;
             }
 
-            
-
-            .button {
-                background-color: #000000;
-                /* border: 1px solid black; */
-                font-size: 30px;
-                text-align: center;
-            }
-
-            .button:hover {
-                background-color: #07070788;
-            }
-
-            .button span {
-                position: absolute;
-                /* background-color: #ee1818; */
-                top: 50%;
-                transform: translate(-50%, -50%);
-                width: max-content;
-            }
-
-            .header_img {
-                position: relative;
+            .c-button {
+                background-color: blueviolet;
                 width: 100%;
+                height: 100%;
             }
 
+            .actual-button {
+                position: relative;
+                background-color: brown;
+                height: calc(100%-10px);
+                display: grid;
+                text-align: center;
+                align-items: center;
+                font-size: 2.8cqi;
+                color: black;
+                padding: 5px;
+            }
 
         </style>
     </head>
     <body>
 
-
-
-        <div class="about">
-            <img class="header_img" src="Header.png">
-            <!-- <img class="pic" src="me.jpg" alt="me">
-            <span class="m_info">Matt Hughes<br>Artist and Engineer</span>
-            <span class="r_info">
-                Certificate in Simulation and Game Development: Fundamentals I from Wake Tech Community College<br>
-                BS Mathematics from UNC Chapel Hill<br>
-                Current Graduate Animatronics at UNC School of the Arts
-            </span> -->
-            <a href="https://www.artstation.com/mhughe46"><img class="as" src="artstation.png" alt=""></a>
+        <div class="header-container">
+            <div>Engineering</div>
+            <div>Characters</div>
+            <div>Environments</div>
+            <div>Matt Hughes <br> Artist and Engineer</div>
         </div>
 
-        <div class="selector">
-            <div class="button" onclick="hideItemByClass('grid-item')"><span>All</span></div>
-            <div class="button" onclick="hideItemByClass('char')"><span>Characters</span></div>
-            <div class="button" onclick="hideItemByClass('eng')"><span>Engineering</span></div>
-            <div class="button" onclick="hideItemByClass('env')"><span>Environments</span></div>
+        <div class="display-container">
+            <div class="display-box">
+                <div class="c-container">
+                    <img src="posts/bingus/ezgif-60b285fad4eeba3d.webp" alt="" id="c-img">
+                </div>
+                <div class="c-buttons">
+                    <div class="c-button" onclick="UpdateCarousel(0)"></div>
+                    <div class="c-button" onclick="UpdateCarousel(1)"></div>
+                    <div class="c-button" onclick="UpdateCarousel(2)"></div>
+                    <div class="c-button" onclick="UpdateCarousel(3)"></div>
+                </div>
+            </div>
+            <div class="display-text">
+                <div class="display-title">Title</div>
+                <div class="display-desc">description</div>
+                <div class="display-button"><a id="display_button" href="posts/Arm/index.html"><div class="actual-button">See More</div></a></div>
+            </div>
         </div>
 
-        <div class="grid-container">
-            
-            
-            <div class="grid-item char">
-                <a href="posts/Dove/index.html">
-                    <img src="posts/Dove/IMG_3042.JPG">
-                    <div><span>Dove</span></div>
-                </a>
+        <div class="divider">
+            <div>Want to contact me?</div>
+            <div>Dont!</div>
+        </div>
+
+        <div class="gallery">
+
+            <div class="gallery-item">
+                <div class="item-img"><img src="posts/Dove/IMG_3226.JPG" alt=""></div>
+                <div class="item-img"><img src="posts/Dove/IMG_3228.JPG" alt=""></div>
+                <div class="item-img"><img src="posts/Dove/IMG_3219.JPG" alt=""></div>
+                <div class="item-text">
+                    <div class="item-text-title">La Colombe</div>
+                    <div class="item-text-text">A rotating Frankenstein themed arm attached to a sheet metal box</div>
+                    <a href="posts/Dove/index.html"><div class="item-button-box">See More</div></a>
+                </div>
             </div>
-            <div class="grid-item eng">
-                <a href="posts/bingus/index.html">
-                    <img src="posts/bingus/Thumbnail.jpg">
-                    <div><span>Bingus</span></div>
-                </a>
+
+            <div class="gallery-item">
+                <div class="item-img"><img src="posts/Arm/IMG_2922.JPG" alt=""></div>
+                <div class="item-img"><img src="posts/Arm/IMG_2914.JPG" alt=""></div>
+                <div class="item-img"><img src="posts/Arm/IMG_2916.JPG" alt=""></div>
+                <div class="item-text">
+                    <div class="item-text-title">Frankenstein Arm</div>
+                    <div class="item-text-text">A rotating Frankenstein themed arm attached to a sheet metal box</div>
+                    <a href="posts/Arm/index.html"><div class="item-button-box">See More</div></a>
+                </div>
             </div>
-            <div class="grid-item env">
-                <a href="posts/Tree/index.html">
-                    <img src="posts/Tree/1.png">
-                    <div><span>Tree House</span></div>
-                </a>
+
+
+            <div class="gallery-item">
+                <div class="item-img"><img src="posts/bingus/Thumbnail.jpg" alt=""></div>
+                <div class="item-img"><img src="posts/bingus/C3.JPG" alt=""></div>
+                <div class="item-img"><img src="posts/bingus/C1.JPG" alt=""></div>
+                <div class="item-text">
+                    <div class="item-text-title">Bingus</div>
+                    <div class="item-text-text">A glow in the dark sour-patch themed animatronic used to film a commercial
+                        in partnership with the UNCSA film department.
+                    </div>
+                    <a href="posts/bingus/index.html"><div class="item-button-box">See More</div></a>
+                </div>
             </div>
-            <div class="grid-item eng char">
-                <a href="posts/Hoppy/index.html">
-                    <img src="posts/Hoppy/Thumbnail.JPG">
-                    <div><span>Hoppy</span></div>
-                </a>
+
+            <div class="gallery-item">
+                <div class="item-img"><img src="posts/Hoppy/Thumbnail.JPG" alt=""></div>
+                <div class="item-img"><img src="posts/Hoppy/Right.jpg" alt=""></div>
+                <div class="item-img"><img src="posts/Hoppy/Ortho2.JPG" alt=""></div>
+                <div class="item-text">
+                    <div class="item-text-title">Hoppy the Penguin</div>
+                    <div class="item-text-text">A glow in the dark sour-patch themed animatronic used to film a commercial
+                        in partnership with the UNCSA film department.
+                    </div>
+                    <a href="posts/Hoppy/index.html"><div class="item-button-box">See More</div></a>
+                </div>
             </div>
-            <div class="grid-item eng">
-                <a href="posts/Arm/index.html">
-                    <img src="posts/Arm/Thumbnail.JPG">
-                    <div><span>Frankenstein Arm</span></div>
-                </a>
-            </div>
-            <div class="grid-item env">
-                <a href="posts/diorama/index.html">
-                    <img src="posts/diorama/diorama.jpeg">
-                    <div><span>Diorama</span></div>
-                </a>
-            </div>
-            <div class="grid-item char">
-                <a href="posts/snowman/index.html">
-                    <img src="posts/snowman/snowman.jpeg">
-                    <div><span>Snowman</span></div>
-                </a>
-            </div>
-            <div class="grid-item char">
-                <a href="posts/ghost/index.html">
-                    <img src="posts/ghost/ghost.webp">
-                    <div><span>Ghost</span></div>
-                </a>
-            </div>
-            <div class="grid-item env">
-                <a href="posts/trailer/index.html">
-                    <img src="posts/trailer/trailer.webp">
-                    <div><span>Trailer</span></div>
-                </a>
-            </div>
-            <div class="grid-item char">
-                <a href="posts/wgirl/index.html">
-                    <img src="posts/wgirl/character.jpeg">
-                    <div><span>Winter Girl</span></div>
-                </a>
-            </div>
-            <div class="grid-item env">
-                <a href="posts/restaurant/index.html">
-                    <img src="posts/restaurant/diorama4.webp">
-                    <div><span>Restaurant</span></div>
-                </a>
-            </div>
-            <div class="grid-item char">
-                <a href="posts/gargs/index.html">
-                    <img src="posts/gargs/garg2.webp">
-                    <div><span>Garygoyle Sculpts</span></div>
-                </a>
-            </div>
-            <div class="grid-item env">
-                <a href="posts/modular/index.html">
-                    <img src="posts/modular/modularity1.jpg">
-                    <div><span>Roman Hallway</span></div>
-                </a>
-            </div>
-            
-            
-            
+
+
         </div>
 
         <script>
-            function hideItemByClass(name) {
-                
-                const elements = document.getElementsByClassName("grid-item");
-                
-                for (let i = 0; i < elements.length; ++i) {
-                    if (!elements[i].classList.contains(name)) {
-                        elements[i].style.display = "none";
-                    } else {
-                        elements[i].style.display = "grid";
-                    }
-                    
+
+            // document.getElementById("c-button").style.backgroundColor = "red";
+
+            function UpdateCarousel(n) {
+                for (let i = 0; i < 4; i++) {
+                    document.getElementsByClassName("c-button")[i].style.backgroundColor = "grey";
                 }
-                
+                document.getElementsByClassName("c-button")[n].style.backgroundColor = "red";
+                document.getElementsByClassName("display-title")[0].innerHTML = cTitles[n];
+                document.getElementById('c-img').src = cImgs[n];
+                document.getElementById('display_button').href = cLinks[n];
+                 document.getElementsByClassName("display-desc")[0].innerHTML = cDesc[n];
+
             }
+
+            const cTitles = ['La Colombe', 'Bishop', 'Bingus', 'Hoppy the Penguin'];
+            const cImgs = ['posts/Dove/ezgif-337892013bf8eb7a.webp', 'posts/Bishop/IMG_3238.JPG', 'posts/bingus/ezgif-60b285fad4eeba3d.webp', 'posts/Hoppy/Thumbnail.JPG'];
+            const cLinks = ['posts/Dove/index.html', 'posts/Arm/index.html', 'posts/bingus/index.html', 'posts/Hoppy/index.html']
+            const cDesc = [
+                'An animatronic dove I designed and puppeteered for the UNCSA spring opera La Colombe.',
+                'dasgagdga',
+                'asagag',
+                'shdsh'
+            ];
+
+            UpdateCarousel(0);
+
         </script>
+
+
         
     </body>
     </html>
