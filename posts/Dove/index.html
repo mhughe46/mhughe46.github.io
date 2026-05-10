@@ -3,6 +3,7 @@
     <title>Dove</title>
     <link rel="stylesheet" href="../../style/main.css">
     <link rel="stylesheet" href="../../style/post.css">
+    <link rel="icon" type="image/x-icon" href="../../images/end2.ico">
 
     <style>
     .main_video {
@@ -44,6 +45,25 @@
         margin-right: 20%;
         margin-bottom: 5%;
     }
+
+    .main-container {
+        /* height: 70%; */
+        /* background-color: aquamarine; */
+        display: grid;
+        height: fit-content;
+        padding: 0%;
+        margin: 0%;
+    }
+
+    .main-container img {
+        display: grid;
+        width: 60svw;
+        object-fit: contain;
+        left: 50%;
+        position: relative;
+        transform: translate(-50%, 0);
+        top: 0%;
+    }
     </style>
 </head>
 
@@ -53,8 +73,8 @@
     <header id="header-container"></header>
     <div style="margin-bottom: 70px;"></div>
 
-    <div class="video-container">
-        <video controls autoplay muted loop class="main_video" src="IMG_3040.MOV" autoplay></video>
+    <div class="main-container">
+       <img src="ezgif-337892013bf8eb7a.webp" alt=""> 
     </div>
 
     <div class="title">
@@ -68,6 +88,8 @@
     </div>
 
     <script src="../../scripts/header.js" defer></script>
+    
+    <div><iframe src="https://youtube.com/shorts/dAZsjv1gFGk?si=za338lBDlxzfOPM_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 
     <div class="img_grid">
         <img src="IMG_3033.JPG" alt="">
