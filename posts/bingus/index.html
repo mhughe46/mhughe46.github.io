@@ -1,144 +1,157 @@
-<html >
+<!DOCTYPE html>
+
 <head>
-    <title>Trailer</title>
-    <link rel="stylesheet" href="../../style/main.css">
-    <link rel="stylesheet" href="../../style/post.css">
+    <title>Bingus</title>
+        <!-- <link rel="stylesheet" href="style/main.css"> -->
+    <link rel="icon" type="image/x-icon" href="../../images/end2.ico">
 
     <style>
-    .main_video {
-        height: 75%;
-        position: relative;
-        left: 50%;
-        transform: translate(-50%, 0);
-    }
+        @font-face {
+                font-family: 'Project Blackbird';
+                src: url('../../fonts/projekt-blackbird-v2.otf') format('opentype'); /* Adjust path */
+                font-weight: normal;
+                font-style: normal;
+            }
+            body {
+                margin: 0;
+                padding: 0; /* Optional: Resets internal padding if any */
+                background-color: #2c2c2c;
+                font-family: 'Project Blackbird'; /* Add fallback */
+                position: relative;
+            }
+
+            .header{
+                position: relative;
+                width: calc(100%-20px);
+                height: 3svw;
+                background-color: rgb(0, 0, 0); /* Optional */
+                display: grid;
+                /* grid-template-columns: auto auto auto auto; */
+                /* padding: 5px; */
+            }
+
+            .main-container {
+                position: relative;
+                width: calc(100%-20px);
+                height: 30svw;
+                background-color: rgb(36, 36, 36); /* Optional */
+                /* display: grid; */
+                /* grid-template-columns: auto auto; */
+                /* padding: 5px; */
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+
+            .main-content {
+                /* background-color: aqua; */
+                width: 100%;
+                height: 100%;
+                /* display: grid; */
+            }
+
+            .main-content iframe {
+                position: relative;
+                height: 100%;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+
+            .title {
+                width: 100%;
+                height: fit-content;
+                background-color: rgb(0, 0, 0);
+                font-size: 2.8cqi;
+                color: white;
+                padding: 10px;
+            }
+
+            .description {
+                width: 70%;
+                font-size: 1.2cqi;
+                /* background-color: black; */
+                color: white;
+                padding: 10px;
+                padding-bottom: 30px;
+            }
+
+            .img-set {
+                position:relative;
+                display:inline-block;
+                width:100%;
+                height: fit-content;
+                overflow:hidden;
+                /* margin:10px; */
+                /* background:lightgrey; */
+                display: grid;
+            }
 
 
-    .img_grid {
-        display: grid;
-        grid-template-columns: auto auto auto auto;
-        position: relative;
-        left: 0%;
-        top: 0%;
-        }
+            .display-img {
+                position:relative;
+                /* top:50%;
+                left:50%; */
+                /* max-width:100%;
+                max-height:60svh; */
+                max-width: 90%;
+                left: 50%;
+                transform:translate(-50%, 0);
+                max-height: 60svh;
+                padding-top: 10px;
+            }
 
-    .img_grid img {
-        position: relative;
-        width: 70%;
-        left: 40%;
-        top: 00%;
-        transform: translate(-50%, 0%);
-        background-color: brown;
-    }
+            .home-button {
+                text-transform: uppercase;
+                /* font-family: 'Oswald', sans-serif; */
+                letter-spacing: 0.4rem;
+                width: max-content;
+                font-size: 1.25em;
+                line-height: 1.25;
+                font-weight: 600;
+                position: relative;
+                color: #FFFFFF;
+                top: 30%;
+                margin-left: 20px;
+                text-decoration: none;
+            }
 
-    .img_grid3 {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        position: relative;
-        left: 0%;
-        top: 0%;
-        }
+            .home-button:hover {
+                color: rgb(233, 233, 233);
+            }
 
-    .img_grid3 img {
-        position: relative;
-        width: 90%;
-        left: 50%;
-        top: 00%;
-        transform: translate(-55%, 0%);
-        background-color: brown;
-    }
+            .main-img {
+                position: relative;
+                height: 100%;
+                left: 50%;
+                top: 50%;
+                transform:translate(-50%, -50%);
+            }
 
-    .vid_grid {
-        display: grid;
-        grid-template-columns: auto auto;
-        position: relative;
-    }
-
-    .vid_grid video {
-        position: relative;
-        /* width: 40%; */
-        left: 50%;
-        top: 50%;
-        transform: translate(-60%, -50%);
-        margin-left: 20%;
-        margin-right: 20%;
-        margin-bottom: 5%;
-    }
-
-    .vid_grid div {
-        position: relative;
-        /* background-color: brown; */
-        width: 50vw;
-        height: 40vw;
-        margin: 5%;
-    }
-
-    .vid_grid div iframe {
-        position: relative;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        top: 50%;
-        /* margin-left: 5%; */
-        height: max-content;
-        width: 100%;
-        height: 60%;
-    }
-
-    .vid_grid3 {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        position: relative;
-    }
-
-    .vid_grid3 video {
-        position: relative;
-        width: 50%;
-        top: 50%;
-        transform: translate(0%, -50%);
-        margin-left: 20%;
-        margin-right: 20%;
-        margin-bottom: 5%;
-    }
-
-    .last {
-        display: grid;
-        grid-template-columns: auto auto;
-        position: relative;
-    }
-
-    .last_text {
-        position: absolute;
-        /* background-color: rgb(64, 54, 158); */
-        width: 50%;
-        left: 35%;
-        top: 20%;
-        text-align: left;
-
-        color: rgba(255,255,255,0.749);
-        font-family: 'Oswald', sans-serif;
-        letter-spacing: 0.075rem;
-        width: 50%;
-        font-size: 2em;
-        line-height: 1.25;
-        font-weight: 500;
-}
-
-    .sketchfab-embed-wrapper iframe {
-        position: relative;
-        width: 50svw;
-        height: 30svw;
-        margin-left: 5svw;
-    }
+            .img-set iframe {
+                width: 90%;
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
     </style>
 </head>
 
-
 <body>
+    <div class="header">
+        <a class="home-button" href="../../index.html">Back to Home</a>
+    </div>
 
-    <header id="header-container"></header>
-    <div style="margin-bottom: 70px;"></div>
-
-    <div class="video-container">
-        <video controls preload="auto" autoplay muted loop class="main_video" src="main.MP4" autoplay></video>
+    <div class="main-container">
+        <!-- <div class="main-content">
+            <iframe src="https://www.youtube.com/embed/SkuydK-f3n0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="main-content">
+            <iframe src="https://www.youtube.com/embed/VnMOcrvSvtw?si=58E2VLu65622wXBc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div> -->
+        <div class="main-content">
+            <img src="vid1.webp" alt="" class="main-img">
+        </div>
+        
     </div>
 
     <div class="title">
@@ -154,54 +167,31 @@
         and 3D printed it in parts. I also sculpted his body in Z Brush which was used to
          support his fur as well as his hands and feet. I worked with another student to wire controllers connected
          to an ESP32 which allowed us to control Bingus remotely.
-
     </div>
 
-    <script src="../../scripts/header.js" defer></script>
-
-    <div class="vid_grid">
-        <!-- <div></div> -->
-        <div><iframe src="https://www.youtube.com/embed/eyqOsFmscg0?si=LiB9IWTIJLZwCfqE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-        <video controls preload="auto" muted loop class="mini_video" src="moving2.MOV" width="50%"></video>
+    <div class="img-set" style="grid-template-columns: auto auto auto;">
+        <img src="main.webp" alt="" class="display-img">
+        <img src="hands.webp" alt="" class="display-img">
+        <img src="teeth.webp" alt="" class="display-img">
     </div>
 
-    <div class="sketchfab-embed-wrapper"> <iframe title="Sour Patch Animatronic Skeleton" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/9122727fc47e49fdac6b86de01f2b2a9/embed"> </iframe> </div>
-
-
-    <div class="vid_grid3">
-        <video controls preload="auto" muted loop class="mini_video" src="eyes3.MOV"></video>
-        <video controls preload="auto" muted loop class="mini_video" src="eyes1.MOV"></video>
+    <div class="img-set" style="grid-template-columns: auto auto;">
+        <iframe src="https://www.youtube.com/embed/eyqOsFmscg0?si=LiB9IWTIJLZwCfqE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <img src="moving.webp" alt="" class="display-img">
     </div>
 
-    <div class="img_grid3">
-        <img src="C1.JPG" alt="">
-        <img src="C2.JPG" alt="">
-        <img src="C3.JPG" alt="">
-    </div>
-    
-    <div class="vid_grid3">
-        <video controls preload="auto" muted loop class="mini_video" src="D1.mp4"></video>
-        <video controls preload="auto" muted loop class="mini_video" src="D2.MOV"></video>
-        <video controls preload="auto" muted loop class="mini_video" src="D3.MOV"></video>
+    <div class="img-set" style="grid-template-columns: auto auto auto auto;">
+        <img src="eyes1.webp" alt="" class="display-img">
+        <img src="eyes2.webp" alt="" class="display-img">
+        <img src="eyes3.webp" alt="" class="display-img">
+        <img src="ezgif-38b27732c77a038a.webp" alt="" class="display-img">
     </div>
 
-    <div class="img_grid3">
-        <img src="E1.JPG" alt="">
-        <img src="E2.JPG" alt="">
-        <img src="E3.JPG" alt="">
-    </div>
-    <div class="img_grid">
-        <img src="F1.JPG" alt="">
-        <img src="F2.JPG" alt="">
+    <div class="img-set" style="grid-template-columns: auto auto auto auto;">
+        <img src="E1.JPG" alt="" class="display-img">
+        <img src="E2.JPG" alt="" class="display-img">
+        <img src="E3.JPG" alt="" class="display-img">
+        <!-- <img src="zbrush.png" alt="" class="display-img"> -->
     </div>
 
-    <div class="last">
-        <img src="ref2.JPG" alt="" width="30%">
-        <div class="last_text" >Previous school animatronic I used as reference</div>
-    </div>
-    
-    
 </body>
-</html>
-
-<script></script>
