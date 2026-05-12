@@ -1,97 +1,140 @@
-<html >
+<!DOCTYPE html>
+
 <head>
-    <title>Dove</title>
-    <link rel="stylesheet" href="../../style/main.css">
-    <link rel="stylesheet" href="../../style/post.css">
+    <title>Sylvie the Dove</title>
+        <!-- <link rel="stylesheet" href="style/main.css"> -->
     <link rel="icon" type="image/x-icon" href="../../images/end2.ico">
 
     <style>
-    .main_video {
-        height: 75%;
-        position: relative;
-        left: 50%;
-        transform: translate(-50%, 0);
-    }
+        @font-face {
+                font-family: 'Project Blackbird';
+                src: url('../../fonts/projekt-blackbird-v2.otf') format('opentype'); /* Adjust path */
+                font-weight: normal;
+                font-style: normal;
+            }
+            body {
+                margin: 0;
+                padding: 0; /* Optional: Resets internal padding if any */
+                background-color: #2c2c2c;
+                font-family: 'Project Blackbird'; /* Add fallback */
+                position: relative;
+            }
+
+            iframe {
+                width: 100%;
+                height: 100%;
+            }
+
+            .header{
+                position: relative;
+                width: calc(100%-20px);
+                height: 3svw;
+                background-color: rgb(0, 0, 0); /* Optional */
+                display: grid;
+                /* grid-template-columns: auto auto auto auto; */
+                /* padding: 5px; */
+            }
+
+            .main-container {
+                position: relative;
+                width: calc(100%-20px);
+                height: 30svw;
+                background-color: rgb(26, 26, 26); /* Optional */
+                display: grid;
+                /* grid-template-columns: auto auto; */
+                /* padding: 5px; */
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+
+            .main-content {
+                /* background-color: aqua; */
+                width: 100%;
+                height: 100%;
+                display: grid;
+            }
+
+            .main-content iframe {
+                position: relative;
+                height: 100%;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+
+            .title {
+                width: calc(100%-20px);
+                height: fit-content;
+                background-color: rgb(0, 0, 0);
+                font-size: 2.8cqi;
+                color: white;
+                padding: 10px;
+            }
+
+            .description {
+                width: 70%;
+                font-size: 1.2cqi;
+                /* background-color: black; */
+                color: white;
+                padding: 10px;
+                padding-bottom: 30px;
+            }
+
+            .img-set {
+                position:relative;
+                display:inline-block;
+                width:100%;
+                height: fit-content;
+                overflow:hidden;
+                /* margin:10px; */
+                /* background:lightgrey; */
+                display: grid;
+            }
 
 
-    .img_grid {
-        display: grid;
-        grid-template-columns: auto auto auto auto;
-        position: relative;
-        left: 0%;
-        top: 0%;
-        }
+            .display-img {
+                position:relative;
+                /* top:50%;
+                left:50%; */
+                /* max-width:100%;
+                max-height:60svh; */
+                max-width: 90%;
+                left: 50%;
+                transform:translate(-50%, 0);
+                max-height: 60svh;
+                padding-top: 10px;
+            }
 
-    .img_grid img {
-        position: relative;
-        width: 90%;
-        left: 40%;
-        top: 00%;
-        transform: translate(-50%, 0%);
-        background-color: brown;
-    }
+            .home-button {
+                text-transform: uppercase;
+                /* font-family: 'Oswald', sans-serif; */
+                letter-spacing: 0.4rem;
+                width: max-content;
+                font-size: 1.25em;
+                line-height: 1.25;
+                font-weight: 600;
+                position: relative;
+                color: #FFFFFF;
+                top: 30%;
+                margin-left: 20px;
+                text-decoration: none;
+            }
 
-    .img_grid3 {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        position: relative;
-        left: 0%;
-        top: 0%;
-        }
-
-    .img_grid3 img {
-        position: relative;
-        width: 90%;
-        left: 40%;
-        top: 00%;
-        transform: translate(-50%, 0%);
-        background-color: brown;
-    }
-
-    .vid_grid {
-        display: grid;
-        grid-template-columns: auto auto;
-        position: relative;
-    }
-
-    .vid_grid video {
-        position: relative;
-        width: 40%;
-        transform: translate(25%, 0);
-        margin-left: 20%;
-        margin-right: 20%;
-        margin-bottom: 5%;
-    }
-
-    .main-container {
-        /* height: 70%; */
-        /* background-color: aquamarine; */
-        display: grid;
-        height: fit-content;
-        padding: 0%;
-        margin: 0%;
-    }
-
-    .main-container img {
-        display: grid;
-        width: 60svw;
-        object-fit: contain;
-        left: 50%;
-        position: relative;
-        transform: translate(-50%, 0);
-        top: 0%;
-    }
+            .home-button:hover {
+                color: rgb(233, 233, 233);
+            }
     </style>
 </head>
 
-
 <body>
-
-    <header id="header-container"></header>
-    <div style="margin-bottom: 70px;"></div>
+    <div class="header">
+        <a class="home-button" href="../../index.html">Back to Home</a>
+    </div>
 
     <div class="main-container">
-       <img src="ezgif-337892013bf8eb7a.webp" alt=""> 
+        <div class="main-content">
+           <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/tdm9Qx0Zx5A?si=VON00R7_yN3Ja0kT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+            <img src="ezgif-337892013bf8eb7a.webp" alt="" class="display-img">
+        </div>
     </div>
 
     <div class="title">
@@ -99,31 +142,47 @@
     </div>
 
     <div class="description">
-        A maquette I created to serve as a scale and design model for UNCSA's spring opera
-        La Colombe. (The Dove) I sculpted the maquette in Blender before 3D printing,
-        sanding, filling, and painting to match the chosen design for the dove.
+        A dove animatronic I created for the UNCSA spring opera La Colombe (The Dove), as part of the show: Of Sorcery
+        and Songbirds. I puppeteered the dove during the show using a control box with an ESP-32 that could connect via ESP-now.
+        For this project, I sculpted and fabricated a macquette to be used as color and scale reference. I then designed, 
+        fabricated, and assembled the internal mechanics with plastic shells. Fur and feathers were placed on top of the shells
+        to create the appearance of a real dove.
+        <br><br>
+        Skills: Sculpting, Mechanical Design, Electronics, Puppetery.
     </div>
 
-    <script src="../../scripts/header.js" defer></script>
-
-    <div class="img_grid3">
-        <img src="IMG_3033.JPG" alt="">
-        <img src="IMG_3043.JPG" alt="">
-        <img src="IMG_3042.JPG" alt="">
-    </div>
-    <div class="description">
-        Digital Renders
-    </div>
-    
-    <div class="img_grid">
-        <img src="Persp2.png" alt="">
-        <img src="Persp3.png" alt="">
-        <img src="Persp4.png" alt="">
-        <img src="Persp.png" alt="">
+    <div class="img-set" style="grid-template-columns: auto auto auto auto;">
+        <img src="IMG_3219.JPG" alt="" class="display-img">
+        <img src="IMG_3220.JPG" alt="" class="display-img">
+        <img src="IMG_3228.JPG" alt="" class="display-img">
+        <img src="IMG_3226.JPG" alt="" class="display-img">
     </div>
 
-    
+    <div class="img-set" style="grid-template-columns: auto auto auto auto;">
+        <img src="3201.webp" alt="" class="display-img">
+        <img src="3200.webp" alt="" class="display-img">
+        <img src="1.webp" alt="" class="display-img">
+        <img src="2.webp" alt="" class="display-img">
+    </div>
+
+    <div class="img-set" style="grid-template-columns: auto auto auto auto;">
+        
+        <img src="3124.webp" alt="" class="display-img">
+        <img src="3127.webp" alt="" class="display-img">
+    </div>
+
+    <div class="img-set" style="grid-template-columns: auto auto auto auto;">
+        <img src="IMG_3033.JPG" alt="" class="display-img">
+        <img src="IMG_3034.JPG" alt="" class="display-img">
+        <img src="IMG_3043.JPG" alt="" class="display-img">
+        <img src="maq.webp" alt="" class="display-img">
+    </div>
+
+    <div class="img-set" style="grid-template-columns: auto auto auto auto;">
+        <img src="Persp.png" alt="" class="display-img">
+        <img src="Persp2.png" alt="" class="display-img">
+        <img src="Persp3.png" alt="" class="display-img">
+        <img src="Persp4.png" alt="" class="display-img">
+    </div>
+
 </body>
-</html>
-
-<script></script>

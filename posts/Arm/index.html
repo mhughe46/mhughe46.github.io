@@ -1,64 +1,144 @@
-<html >
+<!DOCTYPE html>
+
 <head>
-    <title>Trailer</title>
-    <link rel="stylesheet" href="../../style/main.css">
-    <link rel="stylesheet" href="../../style/post.css">
+    <title>Frankenstein Arm</title>
+        <!-- <link rel="stylesheet" href="style/main.css"> -->
+    <link rel="icon" type="image/x-icon" href="../../images/end2.ico">
 
     <style>
-    .main_video {
-        height: 75%;
-        position: relative;
-        left: 50%;
-        transform: translate(-50%, 0);
-    }
+        @font-face {
+                font-family: 'Project Blackbird';
+                src: url('../../fonts/projekt-blackbird-v2.otf') format('opentype'); /* Adjust path */
+                font-weight: normal;
+                font-style: normal;
+            }
+            body {
+                margin: 0;
+                padding: 0; /* Optional: Resets internal padding if any */
+                background-color: #2c2c2c;
+                font-family: 'Project Blackbird'; /* Add fallback */
+                position: relative;
+            }
+
+            iframe {
+                width: 100%;
+                height: 100%;
+            }
+
+            .header{
+                position: relative;
+                width: calc(100%-20px);
+                height: 3svw;
+                background-color: rgb(0, 0, 0); /* Optional */
+                display: grid;
+                /* grid-template-columns: auto auto auto auto; */
+                /* padding: 5px; */
+            }
+
+            .main-container {
+                position: relative;
+                width: calc(100%-20px);
+                height: 30svw;
+                background-color: rgb(26, 26, 26); /* Optional */
+                display: grid;
+                /* grid-template-columns: auto auto; */
+                /* padding: 5px; */
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+
+            .main-content {
+                /* background-color: aqua; */
+                width: 100%;
+                height: 100%;
+                display: grid;
+            }
+
+            .main-content iframe {
+                position: relative;
+                height: 100%;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+
+            .title {
+                width: calc(100%-20px);
+                height: fit-content;
+                background-color: rgb(0, 0, 0);
+                font-size: 2.8cqi;
+                color: white;
+                padding: 10px;
+            }
+
+            .description {
+                width: 70%;
+                font-size: 1.2cqi;
+                /* background-color: black; */
+                color: white;
+                padding: 10px;
+                padding-bottom: 30px;
+            }
+
+            .img-set {
+                position:relative;
+                display:inline-block;
+                width:100%;
+                height: fit-content;
+                overflow:hidden;
+                /* margin:10px; */
+                /* background:lightgrey; */
+                display: grid;
+            }
 
 
-    .img_grid {
-        display: grid;
-        grid-template-columns: auto auto auto auto;
-        position: relative;
-        left: 0%;
-        top: 0%;
-        }
+            .display-img {
+                position:relative;
+                /* top:50%;
+                left:50%; */
+                /* max-width:100%;
+                max-height:60svh; */
+                max-width: 90%;
+                left: 50%;
+                transform:translate(-50%, 0);
+                max-height: 60svh;
+                padding-top: 10px;
+            }
 
-    .img_grid img {
-        position: relative;
-        width: 90%;
-        left: 40%;
-        top: 00%;
-        transform: translate(-50%, 0%);
-        background-color: brown;
-    }
+            .home-button {
+                text-transform: uppercase;
+                /* font-family: 'Oswald', sans-serif; */
+                letter-spacing: 0.4rem;
+                width: max-content;
+                font-size: 1.25em;
+                line-height: 1.25;
+                font-weight: 600;
+                position: relative;
+                color: #FFFFFF;
+                top: 30%;
+                margin-left: 20px;
+                text-decoration: none;
+            }
 
-    .vid_grid {
-        display: grid;
-        grid-template-columns: auto auto;
-        position: relative;
-    }
-
-    .vid_grid video {
-        position: relative;
-        width: 40%;
-        transform: translate(25%, 0);
-        margin-left: 20%;
-        margin-right: 20%;
-        margin-bottom: 5%;
-    }
+            .home-button:hover {
+                color: rgb(233, 233, 233);
+            }
     </style>
 </head>
 
-
 <body>
+    <div class="header">
+        <a class="home-button" href="../../index.html">Back to Home</a>
+    </div>
 
-    <header id="header-container"></header>
-    <div style="margin-bottom: 70px;"></div>
-
-    <div class="video-container">
-        <video controls autoplay muted loop class="main_video" src="Turning.mp4" autoplay></video>
+    <div class="main-container">
+        <div class="main-content">
+           <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/tdm9Qx0Zx5A?si=VON00R7_yN3Ja0kT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+            <img src="turning.webp" alt="" class="display-img">
+        </div>
     </div>
 
     <div class="title">
-        Frankenstein Factory Arm
+        Frankenstein Arm
     </div>
 
     <div class="description">
@@ -68,27 +148,24 @@
         metal which was deburred, hammered into shape, and screwed into the wooden frame. The metal
         was also scuffed with sandpaper and splattered with paint to give a more worn look. I sculpted the
         arm in Blender and 3D printed it before sanding, priming, and painting it.
+        <br><br>
+        Skills: Sculpting, Mechanical Design, Surface Finishing, Carpentry.
     </div>
 
-    <script src="../../scripts/header.js" defer></script>
+    <div class="img-set" style="grid-template-columns: auto auto auto auto;">
+        <img src="IMG_2916.JPG" alt="" class="display-img">
+        <img src="IMG_2913.JPG" alt="" class="display-img">
+        <img src="IMG_2914.JPG" alt="" class="display-img">
+        <img src="IMG_2915.JPG" alt="" class="display-img">
+    </div>
 
-    <div class="img_grid">
-        <img src="IMG_2916.JPG" alt="">
-        <img src="IMG_2913.JPG" alt="">
-        <img src="IMG_2914.JPG" alt="">
-        <img src="IMG_2915.JPG" alt="">
+    <div class="img-set" style="grid-template-columns: auto auto auto auto;">
+        <img src="pla.webp" alt="" class="display-img">
+        <img src="IMG_2922.JPG" alt="" class="display-img">
+        <img src="IMG_2884.JPG" alt="" class="display-img">
+        <img src="wood.webp" alt="" class="display-img">
         
     </div>
-    <img src="IMG_2884.JPG" width="40%" alt="">
-    
-    <img src="IMG_2922.JPG" width="40%" alt="">
 
-    <div class="vid_grid">
-        <video controls autoplay muted loop class="mini_video" src="IMG_2885.MOV" autoplay></video>
-        <video controls autoplay muted loop class="mini_video" src="IMG_2888.mp4" autoplay></video>
-    </div>
-    
+
 </body>
-</html>
-
-<script></script>
